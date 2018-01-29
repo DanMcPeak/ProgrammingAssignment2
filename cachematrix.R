@@ -30,7 +30,7 @@ cacheSolve <- function(x, ...) {
   }
   ##If not cached, grab the matrix
   matrix <- x$get()
-  inv <- ginv(x$get())
+  inv <- solve(x$get())
   x$setinv(inv)
   inv
 }
