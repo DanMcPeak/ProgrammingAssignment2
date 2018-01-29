@@ -4,7 +4,7 @@
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
-  i_X <- NULL
+  i_x <- NULL
   set <- function(y) {
     x <<- y
     i_x <<- NULL
@@ -30,7 +30,7 @@ cacheSolve <- function(x, ...) {
   }
   ##If not cached, grab the matrix
   matrix <- x$get()
-  inv <- ginv(x)
+  inv <- ginv(x$get())
   x$setinv(inv)
   inv
 }
